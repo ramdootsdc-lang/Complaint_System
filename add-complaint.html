@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File a Complaint - ComplaintSys</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">ComplaintSys</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="add-complaint.html" class="active btn btn-primary">File a Complaint</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="form-section">
+            <div class="form-container glass-panel">
+                <h2>Submit Your Complaint</h2>
+                <p>Please provide the details below so we can assist you.</p>
+                <form id="complaintForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" required placeholder="New York">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="tel" id="mobile" name="mobile" required placeholder="1234567890" pattern="[0-9]{10}">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email ID</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="complaint">Complaint Details</label>
+                        <textarea id="complaint" name="complaint" rows="5" required placeholder="Describe your issue here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Submit Complaint</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ComplaintSys. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // Attach form submission handler
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('complaintForm');
+            if (form) {
+                form.addEventListener('submit', handleFormSubmit);
+            }
+        });
+    </script>
+</body>
+</html>

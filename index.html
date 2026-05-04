@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint System - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">ComplaintSys</h1>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="add-complaint.html" class="btn btn-primary">File a Complaint</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <h2>Recent Complaints</h2>
+            <p>Transparency and quick resolution for all your grievances.</p>
+        </section>
+
+        <section class="complaints-container" id="complaintsContainer">
+            <!-- Complaints will be dynamically injected here -->
+            <p class="empty-state">Loading complaints...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ComplaintSys. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // Load complaints on index page load
+        document.addEventListener('DOMContentLoaded', loadComplaints);
+    </script>
+</body>
+</html>
